@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TANUJ_SINGH.EXE</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Scanline overlay -->
+  <div class="scanlines"></div>
+  <div class="crt-overlay"></div>
+
+  <div class="dos-container">
+
+    <!-- Title Bar -->
+    <div class="title-bar">
+      <span>▓▓▒▒░░ RESUME.EXE v1.0 ░░▒▒▓▓</span>
+      <span class="blink">█</span>
+    </div>
+
+    <!-- ASCII Header -->
+    <div class="ascii-header">
+      <pre>
+ ████████╗ █████╗ ███╗   ██╗██╗   ██╗     ██╗
+    ██╔══╝██╔══██╗████╗  ██║██║   ██║     ██║
+    ██║   ███████║██╔██╗ ██║██║   ██║     ██║
+    ██║   ██╔══██║██║╚██╗██║██║   ██║██   ██║
+    ██║   ██║  ██║██║ ╚████║╚██████╔╝╚█████╔╝
+    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝  ╚════╝
+      </pre>
+      <p class="tagline">>> SOFTWARE DEVELOPER | GREATER NOIDA, IN <<</p>
+    </div>
+
+    <!-- Nav Menu -->
+    <div class="dos-nav">
+      <span class="nav-label">[ NAVIGATE ]</span>
+      <button class="dos-btn active" onclick="showSection('about')">[F1] ABOUT</button>
+      <button class="dos-btn" onclick="showSection('skills')">[F2] SKILLS</button>
+      <button class="dos-btn" onclick="showSection('experience')">[F3] EXPERIENCE</button>
+      <button class="dos-btn" onclick="showSection('projects')">[F4] PROJECTS</button>
+      <button class="dos-btn" onclick="showSection('education')">[F5] EDUCATION</button>
+      <button class="dos-btn" onclick="showSection('contact')">[F6] CONTACT</button>
+    </div>
+
+    <!-- Divider -->
+    <div class="divider">╠══════════════════════════════════════════════════════════════════╣</div>
+
+    <!-- ABOUT -->
+    <div id="about" class="section active">
+      <div class="section-title">┌─[ ABOUT ME ]──────────────────────────────────────────────────┐</div>
+      <div class="section-body">
+        <p><span class="prompt">C:\&gt;</span> Hello! I am <span class="highlight">Tanuj Singh</span>, a passionate developer based in Greater Noida, UP.</p>
+        <p><span class="prompt">C:\&gt;</span> I build things for the web, love clean code, and enjoy retro aesthetics.</p>
+        <p><span class="prompt">C:\&gt;</span> Currently seeking opportunities to create impactful software solutions.</p>
+        <p class="cursor-line"><span class="prompt">C:\&gt;</span> <span class="blink">█</span></p>
+      </div>
+      <div class="section-close">└───────────────────────────────────────────────────────────────┘</div>
+    </div>
+
+    <!-- SKILLS -->
+    <div id="skills" class="section">
+      <div class="section-title">┌─[ SKILLS.DAT ]────────────────────────────────────────────────┐</div>
+      <div class="section-body">
+        <div class="skill-grid">
+          <div class="skill-category">
+            <p class="cat-title">▶ LANGUAGES</p>
+            <div class="skill-bar-row"><span>JavaScript</span><div class="skill-bar"><div class="fill" style="width:90%"></div></div></div>
+            <div class="skill-bar-row"><span>Python</span><div class="skill-bar"><div class="fill" style="width:80%"></div></div></div>
+            <div class="skill-bar-row"><span>HTML/CSS</span><div class="skill-bar"><div class="fill" style="width:95%"></div></div></div>
+            <div class="skill-bar-row"><span>C++</span><div class="skill-bar"><div class="fill" style="width:70%"></div></div></div>
+          </div>
+          <div class="skill-category">
+            <p class="cat-title">▶ FRAMEWORKS</p>
+            <div class="skill-bar-row"><span>React.js</span><div class="skill-bar"><div class="fill" style="width:85%"></div></div></div>
+            <div class="skill-bar-row"><span>Node.js</span><div class="skill-bar"><div class="fill" style="width:75%"></div></div></div>
+            <div class="skill-bar-row"><span>Express</span><div class="skill-bar"><div class="fill" style="width:70%"></div></div></div>
+            <div class="skill-bar-row"><span>Git/GitHub</span><div class="skill-bar"><div class="fill" style="width:88%"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="section-close">└───────────────────────────────────────────────────────────────┘</div>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div id="experience" class="section">
+      <div class="section-title">┌─[ EXPERIENCE.LOG ]────────────────────────────────────────────┐</div>
+      <div class="section-body">
+        <div class="job">
+          <p class="job-title">► COMPANY NAME — <span class="highlight">Software Developer</span></p>
+          <p class="job-date">  [JAN 2024 — PRESENT]</p>
+          <p>  • Built scalable REST APIs using Node.js and Express</p>
+          <p>  • Developed React dashboards for internal tooling</p>
+          <p>  • Improved load time by 40% via code optimization</p>
+        </div>
+        <div class="divider-thin">  ···················································</div>
+        <div class="job">
+          <p class="job-title">► PREV COMPANY — <span class="highlight">Intern / Junior Dev</span></p>
+          <p class="job-date">  [JUN 2023 — DEC 2023]</p>
+          <p>  • Assisted in frontend development with HTML/CSS/JS</p>
+          <p>  • Wrote unit tests and documentation</p>
+        </div>
+      </div>
+      <div class="section-close">└───────────────────────────────────────────────────────────────┘</div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div id="projects" class="section">
+      <div class="section-title">┌─[ PROJECTS.DIR ]──────────────────────────────────────────────┐</div>
+      <div class="section-body">
+        <div class="project">
+          <p class="proj-title">◈ PROJECT ALPHA <span class="tag">[REACT]</span><span class="tag">[NODE]</span></p>
+          <p>  A full-stack web app for task management with real-time sync.</p>
+          <p>  <a href="https://github.com/YOUR_USERNAME/project-alpha" class="dos-link">[VIEW ON GITHUB]</a></p>
+        </div>
+        <div class="divider-thin">  ···················································</div>
+        <div class="project">
+          <p class="proj-title">◈ PROJECT BETA <span class="tag">[PYTHON]</span><span class="tag">[ML]</span></p>
+          <p>  A machine learning model to predict housing prices.</p>
+          <p>  <a href="https://github.com/YOUR_USERNAME/project-beta" class="dos-link">[VIEW ON GITHUB]</a></p>
+        </div>
+      </div>
+      <div class="section-close">└───────────────────────────────────────────────────────────────┘</div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div id="education" class="section">
+      <div class="section-title">┌─[ EDUCATION.SYS ]─────────────────────────────────────────────┐</div>
+      <div class="section-body">
+        <p class="job-title">► YOUR UNIVERSITY NAME</p>
+        <p>  <span class="highlight">B.Tech — Computer Science & Engineering</span></p>
+        <p>  [2020 — 2024] | CGPA: X.XX / 10</p>
+        <br/>
+        <p class="job-title">► SCHOOL NAME</p>
+        <p>  <span class="highlight">Higher Secondary (Class XII)</span> | [2019 — 2020]</p>
+      </div>
+      <div class="section-close">└───────────────────────────────────────────────────────────────┘</div>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact" class="section">
+      <div class="section-title">┌─[ CONTACT.INI ]───────────────────────────────────────────────┐</div>
+      <div class="section-body">
+        <p><span class="prompt">EMAIL   :</span> <a href="mailto:you@email.com" class="dos-link">you@email.com</a></p>
+        <p><span class="prompt">GITHUB  :</span> <a href="https://github.com/YOUR_USERNAME" class="dos-link" target="_blank">github.com/YOUR_USERNAME</a></p>
+        <p><span class="prompt">LINKEDIN:</span> <a href="https://linkedin.com/in/YOUR_PROFILE" class="dos-link" target="_blank">linkedin.com/in/YOUR_PROFILE</a></p>
+        <p><span class="prompt">LOCATION:</span> Greater Noida, Uttar Pradesh, IN</p>
+      </div>
+      <div class="section-close">└───────────────────────────────────────────────────────────────┘</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="dos-footer">
+      <span>▓▒░ PRESS [F1-F6] TO NAVIGATE | © 2026 TANUJ SINGH ░▒▓</span>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
