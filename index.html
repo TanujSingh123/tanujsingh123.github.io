@@ -14,27 +14,24 @@
 
   <div class="dos-container">
 
-    <!-- Title Bar -->
     <div class="title-bar">
       <span class="title-text">▓▓▒▒░░ RESUME.EXE v1.0 ░░▒▒▓▓</span>
       <span class="blink">█</span>
     </div>
 
-    <!-- Full Name + ASCII Header -->
     <div class="ascii-header">
       <pre>
-████████╗ █████╗ ███╗   ██╗██╗   ██╗     ██╗    ███████╗██╗███╗   ██╗ ██████╗ ██╗  ██╗
-╚══██╔══╝██╔══██╗████╗  ██║██║   ██║     ██║    ██╔════╝██║████╗  ██║██╔════╝ ██║  ██║
-   ██║   ███████║██╔██╗ ██║██║   ██║     ██║    ███████╗██║██╔██╗ ██║██║  ███╗███████║
-   ██║   ██╔══██║██║╚██╗██║██║   ██║██   ██║    ╚════██║██║██║╚██╗██║██║   ██║██╔══██║
-   ██║   ██║  ██║██║ ╚████║╚██████╔╝╚█████╔╝    ███████║██║██║ ╚████║╚██████╔╝██║  ██║
-   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝  ╚════╝     ╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝
+  ████████╗ █████╗ ███╗   ██╗██╗   ██╗     ██╗    ███████╗██╗███╗   ██╗ ██████╗ ██╗  ██╗
+  ╚══██╔══╝██╔══██╗████╗  ██║██║   ██║     ██║    ██╔════╝██║████╗  ██║██╔════╝ ██║  ██║
+     ██║   ███████║██╔██╗ ██║██║   ██║     ██║    ███████╗██║██╔██╗ ██║██║  ███╗███████║
+     ██║   ██╔══██║██║╚██╗██║██║   ██║██   ██║    ╚════██║██║██║╚██╗██║██║   ██║██╔══██║
+     ██║   ██║  ██║██║ ╚████║╚██████╔╝╚█████╔╝    ███████║██║██║ ╚████║╚██████╔╝██║  ██║
+     ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝  ╚════╝     ╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝
                                                                                       
       </pre>
       <p class="tagline">>> TECHNICAL LEAD | DATA &amp; AI ENGINEER | GREATER NOIDA, IN <<</p>
     </div>
 
-    <!-- Nav Menu -->
     <div class="dos-nav">
       <span class="nav-label">[ NAVIGATE ]</span>
       <button class="dos-btn active" onclick="showSection('about')">[F1] ABOUT</button>
@@ -45,27 +42,50 @@
       <button class="dos-btn" onclick="showSection('contact')">[F6] CONTACT</button>
     </div>
 
-    <!-- Dynamic full-width divider — filled by JS -->
     <div class="main-divider"></div>
 
-    <!-- Scrollable content area -->
     <div class="content-scroll">
 
-      <!-- ABOUT -->
+      <!-- ═══════════ ABOUT ═══════════ -->
       <div id="about" class="section active">
         <div class="section-title" data-title="ABOUT ME"></div>
         <div class="section-body">
-          <p><span class="prompt">C:\&gt;</span> <span class="highlight">6+ years</span> in data engineering — <span class="highlight">Python 3.x, PySpark, Apache Spark, Hadoop</span> &amp; <span class="highlight">Databricks</span>.</p>
-          <p><span class="prompt">C:\&gt;</span> Built AI semantic search using <span class="highlight">SentenceTransformers</span>, <span class="highlight">ChromaDB</span> vector DB &amp; <span class="highlight">PyTorch</span> embeddings.</p>
-          <p><span class="prompt">C:\&gt;</span> Delivered ETL pipelines processing millions of records daily via <span class="highlight">PySpark</span>, <span class="highlight">AWS Lambda</span> &amp; <span class="highlight">S3</span>.</p>
-          <p><span class="prompt">C:\&gt;</span> Deployed containerized solutions with <span class="highlight">Docker + Kubernetes</span>; CI/CD via <span class="highlight">Jenkins</span> &amp; <span class="highlight">GitLab</span>.</p>
-          <p><span class="prompt">C:\&gt;</span> Domain expertise: <span class="highlight">Capital Markets</span> &nbsp;·&nbsp; <span class="highlight">Real Estate</span> &nbsp;·&nbsp; <span class="highlight">Mortgage</span> data platforms.</p>
-          <p class="cursor-line"><span class="prompt">C:\&gt;</span> <span class="blink">█</span></p>
+
+          <!-- Typewriter lines injected here by JS -->
+          <div id="about-typewriter"></div>
+
+          <!-- Animated stat counters -->
+          <div class="about-stats">
+            <div class="stat-box">
+              <div class="stat-top"><span class="stat-num" data-target="6">0</span><span class="stat-plus">+</span></div>
+              <div class="stat-label">YRS EXP</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-top"><span class="stat-num" data-target="2">0</span></div>
+              <div class="stat-label">COMPANIES</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-top"><span class="stat-num" data-target="4">0</span><span class="stat-plus">+</span></div>
+              <div class="stat-label">PROJECTS</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-top"><span class="stat-num" data-target="15">0</span><span class="stat-plus">+</span></div>
+              <div class="stat-label">TECH STACK</div>
+            </div>
+          </div>
+
+          <!-- Hoverable tech badges -->
+          <div class="about-badge-label">▶ KNOWN TECH:</div>
+          <div class="tech-badges" id="about-badges"></div>
+
+          <p class="cursor-line" id="about-cursor" style="display:none">
+            <span class="prompt">C:\&gt;</span> <span class="blink">█</span>
+          </p>
         </div>
         <div class="section-close"></div>
       </div>
 
-      <!-- SKILLS -->
+      <!-- ═══════════ SKILLS ═══════════ -->
       <div id="skills" class="section">
         <div class="section-title" data-title="SKILLS.DAT"></div>
         <div class="section-body">
@@ -106,7 +126,7 @@
         <div class="section-close"></div>
       </div>
 
-      <!-- EXPERIENCE -->
+      <!-- ═══════════ EXPERIENCE ═══════════ -->
       <div id="experience" class="section">
         <div class="section-title" data-title="EXPERIENCE.LOG"></div>
         <div class="section-body">
@@ -118,18 +138,18 @@
             <p class="cat-title">&nbsp;&nbsp;◈ PROJECT 1: AI Semantic Search — Hadoop to AWS Migration</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">[PYTHON]</span><span class="tag">[CHROMADB]</span><span class="tag">[STREAMLIT]</span><span class="tag">[DOCKER]</span><span class="tag">[K8S]</span></p>
             <br/>
-            <p>&nbsp;&nbsp;• Proposed &amp; developed a semantic search application replacing complex Spark-based workflows with AI-powered metadata discovery.</p>
+            <p>&nbsp;&nbsp;• Proposed &amp; developed a semantic search app replacing complex Spark workflows with AI-powered metadata discovery.</p>
             <p>&nbsp;&nbsp;• Vectorized Hadoop table metadata using SentenceTransformers; stored &amp; queried via ChromaDB vector database.</p>
-            <p>&nbsp;&nbsp;• Built an interactive Streamlit dashboard allowing legal &amp; non-technical teams to search datasets using natural language.</p>
-            <p>&nbsp;&nbsp;• Containerized with Docker; deployed on Kubernetes clusters for scalable, reproducible usage.</p>
+            <p>&nbsp;&nbsp;• Built Streamlit dashboard for legal &amp; non-technical teams to search datasets using natural language.</p>
+            <p>&nbsp;&nbsp;• Containerized with Docker; deployed on Kubernetes for scalable, reproducible usage.</p>
             <p>&nbsp;&nbsp;• Source control &amp; continuous delivery via GitLab pipelines.</p>
             <br/>
             <p class="cat-title">&nbsp;&nbsp;◈ PROJECT 2: Real Estate ETL Data Pipeline</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">[PYSPARK]</span><span class="tag">[DATABRICKS]</span><span class="tag">[AWS]</span><span class="tag">[JENKINS]</span></p>
             <br/>
-            <p>&nbsp;&nbsp;• Designed scalable ETL pipelines using PySpark &amp; in-house Python ETL framework to process millions of records daily.</p>
+            <p>&nbsp;&nbsp;• Designed scalable ETL pipelines using PySpark &amp; in-house Python framework to process millions of records daily.</p>
             <p>&nbsp;&nbsp;• Ingested data from RETS &amp; Web APIs; monitored pipeline health with Datadog on AWS Lambda &amp; S3.</p>
-            <p>&nbsp;&nbsp;• Deployed Python builds across dev, staging &amp; production environments via Jenkins CI/CD.</p>
+            <p>&nbsp;&nbsp;• Deployed Python builds across dev, staging &amp; production via Jenkins CI/CD.</p>
           </div>
 
           <div class="thin-divider"></div>
@@ -141,16 +161,16 @@
             <p class="cat-title">&nbsp;&nbsp;◈ PROJECT: Capital Market Portfolio Management</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">[JAVA]</span><span class="tag">[PYTHON]</span><span class="tag">[SQL]</span></p>
             <br/>
-            <p>&nbsp;&nbsp;• Built portfolio &amp; client management application for a capital market client using Core Java, Python 3 &amp; SQL.</p>
+            <p>&nbsp;&nbsp;• Built portfolio &amp; client management app for a capital market client using Core Java, Python 3 &amp; SQL.</p>
             <p>&nbsp;&nbsp;• Worked in Agile methodology; provided estimates, identified risks &amp; recommended solutions.</p>
-            <p>&nbsp;&nbsp;• Participated in code reviews &amp; pair programming sessions to maintain high code quality standards.</p>
+            <p>&nbsp;&nbsp;• Participated in code reviews &amp; pair programming sessions for high code quality standards.</p>
           </div>
 
         </div>
         <div class="section-close"></div>
       </div>
 
-      <!-- PROJECTS -->
+      <!-- ═══════════ PROJECTS ═══════════ -->
       <div id="projects" class="section">
         <div class="section-title" data-title="PROJECTS.DIR"></div>
         <div class="section-body">
@@ -159,7 +179,7 @@
             <p class="proj-title">◈ RAG SEARCH ENGINE <span class="tag">[PYTHON]</span><span class="tag">[RAG]</span><span class="tag">[CHROMADB]</span><span class="tag">[NLP]</span></p>
             <p>&nbsp;&nbsp;Retrieval-Augmented Generation app for semantic document search using vector embeddings.</p>
             <p>&nbsp;&nbsp;<a href="https://github.com/tanujsingh123/rag-search" class="dos-link" target="_blank">[VIEW SOURCE]</a>
-               &nbsp;<a href="#" class="dos-link" target="_blank">[RUN DEMO]</a></p>
+               &nbsp;<a href="#" class="dos-link">[RUN DEMO]</a></p>
           </div>
 
           <div class="thin-divider"></div>
@@ -193,7 +213,7 @@
         <div class="section-close"></div>
       </div>
 
-      <!-- EDUCATION -->
+      <!-- ═══════════ EDUCATION ═══════════ -->
       <div id="education" class="section">
         <div class="section-title" data-title="EDUCATION.SYS"></div>
         <div class="section-body">
@@ -204,7 +224,7 @@
         <div class="section-close"></div>
       </div>
 
-      <!-- CONTACT -->
+      <!-- ═══════════ CONTACT ═══════════ -->
       <div id="contact" class="section">
         <div class="section-title" data-title="CONTACT.INI"></div>
         <div class="section-body">
@@ -220,7 +240,6 @@
 
     </div><!-- end content-scroll -->
 
-    <!-- Footer -->
     <div class="dos-footer">
       <span>▓▒░ [F1] ABOUT &nbsp;[F2] SKILLS &nbsp;[F3] EXPERIENCE &nbsp;[F4] PROJECTS &nbsp;[F5] EDUCATION &nbsp;[F6] CONTACT &nbsp;|&nbsp; © 2026 TANUJ SINGH ░▒▓</span>
     </div>
