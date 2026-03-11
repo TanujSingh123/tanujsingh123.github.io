@@ -1,20 +1,23 @@
-// Section navigation
+const sectionMap = { about:0, skills:1, experience:2, projects:3, education:4, contact:5 };
+
 function showSection(id) {
+  // Hide all sections
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.dos-btn').forEach(b => b.classList.remove('active'));
+
+  // Show selected
   document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.dos-btn')[sectionMap[id]].classList.add('active');
 
-  // Highlight active button
-  const buttons = document.querySelectorAll('.dos-btn');
-  const map = { about:0, skills:1, experience:2, projects:3, education:4, contact:5 };
-  buttons[map[id]].classList.add('active');
+  // Scroll content area back to top
+  document.querySelector('.content-scroll').scrollTop = 0;
 
-  // Re-trigger skill bar animations
+  // Animate skill bars
   if (id === 'skills') {
     document.querySelectorAll('.fill').forEach(bar => {
-      const w = bar.style.width;
+      const target = bar.style.width;
       bar.style.width = '0';
-      setTimeout(() => { bar.style.width = w; }, 50);
+      setTimeout(() => { bar.style.width = target; }, 80);
     });
   }
 }
@@ -28,23 +31,35 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// Boot-up typing effect in title bar
+// Boot-up title animation
 window.addEventListener('load', () => {
   const msgs = [
-    'LOADING RESUME.EXE...',
-    'READING SKILLS.DAT...',
+    'INITIALIZING SYSTEM...',
+    'LOADING SKILLS.DAT...',
     'MOUNTING EXPERIENCE.LOG...',
-    'BOOT COMPLETE ✓'
+    'READING PROJECTS.DIR...',
+    'BOOT SEQUENCE COMPLETE ✓'
   ];
-  const bar = document.querySelector('.title-bar span');
+  const bar = document.querySelector('.title-text');
   let i = 0;
   const cycle = () => {
     if (i < msgs.length) {
       bar.textContent = msgs[i++];
-      setTimeout(cycle, 700);
+      setTimeout(cycle, 650);
     } else {
-      bar.textContent = '▓▓▒▒░░ RESUME.EXE v1.0 ░░▒▒▓▓';
+      bar.textContent = '▓▓▒▒░░ RESUME.EXE v1.0 — TANUJ SINGH ░░▒▒▓▓';
     }
   };
   cycle();
+
+  // Trigger skill bar animation on first load if about is active
+  setTimeout(() => {
+    if (document.getElementById('skills').classList.contains('active')) {
+      document.querySelectorAll('.fill').forEach(bar => {
+        const t = bar.style.width;
+        bar.style.width = '0';
+        setTimeout(() => { bar.style.width = t; }, 80);
+      });
+    }
+  }, 400);
 });

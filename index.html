@@ -9,6 +9,7 @@
 </head>
 <body>
 
+  <!-- CRT Effects -->
   <div class="scanlines"></div>
   <div class="crt-overlay"></div>
 
@@ -16,12 +17,13 @@
 
     <!-- Title Bar -->
     <div class="title-bar">
-      <span>▓▓▒▒░░ RESUME.EXE v1.0 ░░▒▒▓▓</span>
+      <span class="title-text">▓▓▒▒░░ RESUME.EXE v1.0 ░░▒▒▓▓</span>
       <span class="blink">█</span>
     </div>
 
-    <!-- ASCII Header -->
+    <!-- Full Name + ASCII Header -->
     <div class="ascii-header">
+      <h1 class="name-title">Tanuj Singh</h1>
       <pre>
  ████████╗ █████╗ ███╗   ██╗██╗   ██╗     ██╗
     ██╔══╝██╔══██╗████╗  ██║██║   ██║     ██║
@@ -30,7 +32,7 @@
     ██║   ██║  ██║██║ ╚████║╚██████╔╝╚█████╔╝
     ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝  ╚════╝
       </pre>
-      <p class="tagline">>> TECHNICAL LEAD | DATA & AI ENGINEER | GREATER NOIDA, IN <<</p>
+      <p class="tagline">>> TECHNICAL LEAD | DATA &amp; AI ENGINEER | GREATER NOIDA, IN <<</p>
     </div>
 
     <!-- Nav Menu -->
@@ -39,157 +41,193 @@
       <button class="dos-btn active" onclick="showSection('about')">[F1] ABOUT</button>
       <button class="dos-btn" onclick="showSection('skills')">[F2] SKILLS</button>
       <button class="dos-btn" onclick="showSection('experience')">[F3] EXPERIENCE</button>
-      <button class="dos-btn" onclick="showSection('domains')">[F4] DOMAINS</button>
+      <button class="dos-btn" onclick="showSection('projects')">[F4] PROJECTS</button>
       <button class="dos-btn" onclick="showSection('education')">[F5] EDUCATION</button>
       <button class="dos-btn" onclick="showSection('contact')">[F6] CONTACT</button>
     </div>
 
     <div class="divider">╠══════════════════════════════════════════════════════════════════╣</div>
 
-    <!-- ABOUT -->
-    <div id="about" class="section active">
-      <div class="section-title">┌─[ ABOUT ME ]──────────────────────────────────────────────────┐</div>
-      <div class="section-body">
-        <p><span class="prompt">C:\&gt;</span> Hello! I am <span class="highlight">Tanuj Singh</span>, a Technical Lead with <span class="highlight">6+ years</span> of IT experience.</p>
-        <p><span class="prompt">C:\&gt;</span> I specialize in <span class="highlight">Python, PySpark, AI/ML pipelines</span>, and large-scale data engineering.</p>
-        <p><span class="prompt">C:\&gt;</span> Experienced across Capital Market, Real Estate &amp; Mortgage domains.</p>
-        <p><span class="prompt">C:\&gt;</span> Passionate about building AI-driven solutions — from semantic search systems to scalable ETL pipelines.</p>
-        <p class="cursor-line"><span class="prompt">C:\&gt;</span> <span class="blink">█</span></p>
-      </div>
-      <div class="section-close">└───────────────────────────────────────────────────────────────┘</div>
-    </div>
+    <!-- Scrollable content area -->
+    <div class="content-scroll">
 
-    <!-- SKILLS -->
-    <div id="skills" class="section">
-      <div class="section-title">┌─[ SKILLS.DAT ]────────────────────────────────────────────────┐</div>
-      <div class="section-body">
-        <div class="skill-grid">
-          <div class="skill-category">
-            <p class="cat-title">▶ LANGUAGES</p>
-            <div class="skill-bar-row"><span>Python 3.x</span><div class="skill-bar"><div class="fill" style="width:95%"></div></div></div>
-            <div class="skill-bar-row"><span>Core Java</span><div class="skill-bar"><div class="fill" style="width:80%"></div></div></div>
-            <div class="skill-bar-row"><span>SQL</span><div class="skill-bar"><div class="fill" style="width:90%"></div></div></div>
-            <div class="skill-bar-row"><span>NoSQL/MongoDB</span><div class="skill-bar"><div class="fill" style="width:75%"></div></div></div>
-          </div>
-          <div class="skill-category">
-            <p class="cat-title">▶ BIG DATA & CLOUD</p>
-            <div class="skill-bar-row"><span>PySpark</span><div class="skill-bar"><div class="fill" style="width:90%"></div></div></div>
-            <div class="skill-bar-row"><span>Databricks</span><div class="skill-bar"><div class="fill" style="width:85%"></div></div></div>
-            <div class="skill-bar-row"><span>Apache Hadoop</span><div class="skill-bar"><div class="fill" style="width:80%"></div></div></div>
-            <div class="skill-bar-row"><span>AWS (S3/Lambda)</span><div class="skill-bar"><div class="fill" style="width:78%"></div></div></div>
-          </div>
-          <div class="skill-category">
-            <p class="cat-title">▶ AI / ML</p>
-            <div class="skill-bar-row"><span>SentenceTransformers</span><div class="skill-bar"><div class="fill" style="width:85%"></div></div></div>
-            <div class="skill-bar-row"><span>ChromaDB</span><div class="skill-bar"><div class="fill" style="width:82%"></div></div></div>
-            <div class="skill-bar-row"><span>PyTorch</span><div class="skill-bar"><div class="fill" style="width:75%"></div></div></div>
-            <div class="skill-bar-row"><span>Streamlit</span><div class="skill-bar"><div class="fill" style="width:88%"></div></div></div>
-          </div>
-          <div class="skill-category">
-            <p class="cat-title">▶ DEVOPS & TOOLS</p>
-            <div class="skill-bar-row"><span>Docker</span><div class="skill-bar"><div class="fill" style="width:80%"></div></div></div>
-            <div class="skill-bar-row"><span>Kubernetes</span><div class="skill-bar"><div class="fill" style="width:72%"></div></div></div>
-            <div class="skill-bar-row"><span>Jenkins / CI-CD</span><div class="skill-bar"><div class="fill" style="width:80%"></div></div></div>
-            <div class="skill-bar-row"><span>Git / GitLab</span><div class="skill-bar"><div class="fill" style="width:90%"></div></div></div>
-          </div>
+      <!-- ABOUT -->
+      <div id="about" class="section active">
+        <div class="section-title">┌─[ ABOUT ME ]──────────────────────────────────────────────────┐</div>
+        <div class="section-body">
+          <p><span class="prompt">C:\&gt;</span> Hello! I am <span class="highlight">Tanuj Singh</span>, a Technical Lead with <span class="highlight">6+ years</span> of IT experience.</p>
+          <p><span class="prompt">C:\&gt;</span> Proficient in <span class="highlight">Python 3, PySpark, AI/ML pipelines</span> and large-scale data engineering.</p>
+          <p><span class="prompt">C:\&gt;</span> Experienced in building AI-driven applications including semantic search systems using <span class="highlight">SentenceTransformers, ChromaDB</span> and <span class="highlight">PyTorch</span>.</p>
+          <p><span class="prompt">C:\&gt;</span> Domain expertise across <span class="highlight">Capital Markets, Real Estate</span> and <span class="highlight">Mortgage</span> industries.</p>
+          <p><span class="prompt">C:\&gt;</span> Passionate about optimizing workflows — replacing complex Spark queries with elegant NLP-powered solutions.</p>
+          <p class="cursor-line"><span class="prompt">C:\&gt;</span> <span class="blink">█</span></p>
         </div>
-
-        <br/>
-        <p class="cat-title">▶ FULL STACK:</p>
-        <p>&nbsp;&nbsp;Python 3.x · Core Java · SQL · NoSQL (MongoDB) · PySpark · Apache Spark · Hadoop · Databricks · AWS Lambda · Amazon S3 · Jenkins · Git · GitLab · CI/CD · Docker · Streamlit · SentenceTransformers · ChromaDB · PyTorch · Airflow</p>
+        <div class="section-close">└───────────────────────────────────────────────────────────────┘</div>
       </div>
-      <div class="section-close">└───────────────────────────────────────────────────────────────┘</div>
-    </div>
 
-    <!-- EXPERIENCE -->
-    <div id="experience" class="section">
-      <div class="section-title">┌─[ EXPERIENCE.LOG ]────────────────────────────────────────────┐</div>
-      <div class="section-body">
-
-        <div class="job">
-          <p class="job-title">► TAVANT INDIA — <span class="highlight">Senior Software Engineer → Technical Lead</span></p>
-          <p class="job-date">&nbsp;&nbsp;[13 SEP 2021 — PRESENT]</p>
+      <!-- SKILLS -->
+      <div id="skills" class="section">
+        <div class="section-title">┌─[ SKILLS.DAT ]────────────────────────────────────────────────┐</div>
+        <div class="section-body">
+          <div class="skill-grid">
+            <div class="skill-category">
+              <p class="cat-title">▶ LANGUAGES</p>
+              <div class="skill-bar-row"><span>Python 3.x</span><div class="skill-bar"><div class="fill" style="width:95%"></div></div></div>
+              <div class="skill-bar-row"><span>Core Java</span><div class="skill-bar"><div class="fill" style="width:80%"></div></div></div>
+              <div class="skill-bar-row"><span>SQL</span><div class="skill-bar"><div class="fill" style="width:90%"></div></div></div>
+              <div class="skill-bar-row"><span>NoSQL/MongoDB</span><div class="skill-bar"><div class="fill" style="width:75%"></div></div></div>
+            </div>
+            <div class="skill-category">
+              <p class="cat-title">▶ BIG DATA &amp; CLOUD</p>
+              <div class="skill-bar-row"><span>PySpark</span><div class="skill-bar"><div class="fill" style="width:90%"></div></div></div>
+              <div class="skill-bar-row"><span>Databricks</span><div class="skill-bar"><div class="fill" style="width:85%"></div></div></div>
+              <div class="skill-bar-row"><span>Apache Hadoop</span><div class="skill-bar"><div class="fill" style="width:80%"></div></div></div>
+              <div class="skill-bar-row"><span>AWS (S3/Lambda)</span><div class="skill-bar"><div class="fill" style="width:78%"></div></div></div>
+            </div>
+            <div class="skill-category">
+              <p class="cat-title">▶ AI / ML</p>
+              <div class="skill-bar-row"><span>SentenceTransformers</span><div class="skill-bar"><div class="fill" style="width:85%"></div></div></div>
+              <div class="skill-bar-row"><span>ChromaDB</span><div class="skill-bar"><div class="fill" style="width:82%"></div></div></div>
+              <div class="skill-bar-row"><span>PyTorch</span><div class="skill-bar"><div class="fill" style="width:75%"></div></div></div>
+              <div class="skill-bar-row"><span>Streamlit</span><div class="skill-bar"><div class="fill" style="width:88%"></div></div></div>
+            </div>
+            <div class="skill-category">
+              <p class="cat-title">▶ DEVOPS &amp; TOOLS</p>
+              <div class="skill-bar-row"><span>Docker</span><div class="skill-bar"><div class="fill" style="width:80%"></div></div></div>
+              <div class="skill-bar-row"><span>Kubernetes</span><div class="skill-bar"><div class="fill" style="width:72%"></div></div></div>
+              <div class="skill-bar-row"><span>Jenkins / CI-CD</span><div class="skill-bar"><div class="fill" style="width:80%"></div></div></div>
+              <div class="skill-bar-row"><span>Git / GitLab</span><div class="skill-bar"><div class="fill" style="width:90%"></div></div></div>
+            </div>
+          </div>
           <br/>
-          <p class="cat-title">&nbsp;&nbsp;◈ PROJECT: AI Semantic Search — Hadoop to AWS Migration</p>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">[PYTHON]</span><span class="tag">[CHROMADB]</span><span class="tag">[DOCKER]</span><span class="tag">[K8S]</span></p>
-          <p>&nbsp;&nbsp;• Proposed &amp; built a semantic search app to replace complex Spark queries with NL-based metadata discovery.</p>
-          <p>&nbsp;&nbsp;• Vectorized Hadoop table metadata using SentenceTransformers; stored in ChromaDB vector DB.</p>
-          <p>&nbsp;&nbsp;• Built interactive Streamlit dashboard for legal &amp; non-technical teams to search datasets intuitively.</p>
-          <p>&nbsp;&nbsp;• Containerized with Docker, deployed on Kubernetes for scalable usage.</p>
-          <br/>
-          <p class="cat-title">&nbsp;&nbsp;◈ PROJECT: Real Estate ETL Pipeline</p>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">[PYSPARK]</span><span class="tag">[DATABRICKS]</span><span class="tag">[AWS]</span><span class="tag">[JENKINS]</span></p>
-          <p>&nbsp;&nbsp;• Designed scalable ETL pipelines using PySpark to process millions of real estate records daily.</p>
-          <p>&nbsp;&nbsp;• Integrated AWS Lambda &amp; S3 for data ingestion; monitored using Datadog.</p>
-          <p>&nbsp;&nbsp;• Deployed Python builds to dev/staging/prod via Jenkins CI/CD pipelines.</p>
+          <p class="cat-title">▶ FULL STACK:</p>
+          <p class="tech-list">Python 3.x &nbsp;·&nbsp; Core Java &nbsp;·&nbsp; SQL &nbsp;·&nbsp; NoSQL (MongoDB) &nbsp;·&nbsp; PySpark &nbsp;·&nbsp; Apache Spark &nbsp;·&nbsp; Hadoop &nbsp;·&nbsp; Databricks &nbsp;·&nbsp; AWS Lambda &nbsp;·&nbsp; Amazon S3 &nbsp;·&nbsp; Jenkins &nbsp;·&nbsp; Git &nbsp;·&nbsp; GitLab &nbsp;·&nbsp; CI/CD &nbsp;·&nbsp; Docker &nbsp;·&nbsp; Kubernetes &nbsp;·&nbsp; Streamlit &nbsp;·&nbsp; SentenceTransformers &nbsp;·&nbsp; ChromaDB &nbsp;·&nbsp; PyTorch &nbsp;·&nbsp; Airflow</p>
         </div>
+        <div class="section-close">└───────────────────────────────────────────────────────────────┘</div>
+      </div>
 
-        <div class="divider-thin">&nbsp;&nbsp;···················································</div>
+      <!-- EXPERIENCE -->
+      <div id="experience" class="section">
+        <div class="section-title">┌─[ EXPERIENCE.LOG ]────────────────────────────────────────────┐</div>
+        <div class="section-body">
 
-        <div class="job">
-          <p class="job-title">► MPHASIS LIMITED — <span class="highlight">Associate Software Engineer</span></p>
-          <p class="job-date">&nbsp;&nbsp;[23 SEP 2019 — 10 SEP 2021]</p>
-          <br/>
-          <p class="cat-title">&nbsp;&nbsp;◈ PROJECT: Capital Market Portfolio Management</p>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">[JAVA]</span><span class="tag">[PYTHON]</span><span class="tag">[SQL]</span></p>
-          <p>&nbsp;&nbsp;• Worked in Agile methodology on a financial application for portfolio &amp; client management.</p>
-          <p>&nbsp;&nbsp;• Provided programming estimates, identified risks, and recommended solutions.</p>
-          <p>&nbsp;&nbsp;• Collaborated with project managers and used pair programming for high code quality.</p>
+          <div class="job">
+            <p class="job-title">► TAVANT INDIA &nbsp;—&nbsp; <span class="highlight">Senior Software Engineer → Technical Lead</span></p>
+            <p class="job-date">&nbsp;&nbsp;[ 13 SEP 2021 — PRESENT ]</p>
+            <br/>
+            <p class="cat-title">&nbsp;&nbsp;◈ PROJECT 1: AI Semantic Search — Hadoop to AWS Migration</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">[PYTHON]</span><span class="tag">[CHROMADB]</span><span class="tag">[STREAMLIT]</span><span class="tag">[DOCKER]</span><span class="tag">[K8S]</span></p>
+            <br/>
+            <p>&nbsp;&nbsp;• Proposed &amp; developed a semantic search application to replace complex Spark-based data analysis with AI-powered metadata discovery.</p>
+            <p>&nbsp;&nbsp;• Vectorized metadata of Hadoop tables using SentenceTransformers — enabling contextual search over table names, descriptions and column data.</p>
+            <p>&nbsp;&nbsp;• Integrated ChromaDB as vector database backend for efficient &amp; accurate semantic queries across the data lake.</p>
+            <p>&nbsp;&nbsp;• Built an interactive Streamlit dashboard for non-technical &amp; legal teams to search and retrieve datasets intuitively.</p>
+            <p>&nbsp;&nbsp;• Containerized with Docker; deployed on Kubernetes clusters for scalable &amp; reproducible usage.</p>
+            <p>&nbsp;&nbsp;• Collaborated using GitLab for source control and continuous delivery pipelines.</p>
+            <br/>
+            <p class="cat-title">&nbsp;&nbsp;◈ PROJECT 2: Real Estate ETL Pipeline</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">[PYSPARK]</span><span class="tag">[DATABRICKS]</span><span class="tag">[AWS]</span><span class="tag">[JENKINS]</span></p>
+            <br/>
+            <p>&nbsp;&nbsp;• Designed &amp; implemented scalable ETL pipelines using PySpark &amp; in-house framework to process millions of records daily.</p>
+            <p>&nbsp;&nbsp;• Pulled data from RETS and Web API resources; performed ingestion &amp; transformation.</p>
+            <p>&nbsp;&nbsp;• Utilized AWS Lambda &amp; S3 as parts of the data ingestion mechanism; monitored using Datadog.</p>
+            <p>&nbsp;&nbsp;• Deployed Python builds to dev, staging &amp; production via Jenkins CI/CD pipelines.</p>
+          </div>
+
+          <div class="divider-thin">&nbsp;&nbsp;···················································</div>
+
+          <div class="job">
+            <p class="job-title">► MPHASIS LIMITED &nbsp;—&nbsp; <span class="highlight">Associate Software Engineer</span></p>
+            <p class="job-date">&nbsp;&nbsp;[ 23 SEP 2019 — 10 SEP 2021 ]</p>
+            <br/>
+            <p class="cat-title">&nbsp;&nbsp;◈ PROJECT: Capital Market Portfolio Management</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">[JAVA]</span><span class="tag">[PYTHON]</span><span class="tag">[SQL]</span></p>
+            <br/>
+            <p>&nbsp;&nbsp;• Worked in Agile methodology on a financial application for portfolio &amp; client management.</p>
+            <p>&nbsp;&nbsp;• Provided programming estimates, identified risks and recommended solutions.</p>
+            <p>&nbsp;&nbsp;• Participated in code reviews; collaborated via pair programming for high code quality.</p>
+          </div>
+
         </div>
-
+        <div class="section-close">└───────────────────────────────────────────────────────────────┘</div>
       </div>
-      <div class="section-close">└───────────────────────────────────────────────────────────────┘</div>
-    </div>
 
-    <!-- DOMAINS -->
-    <div id="domains" class="section">
-      <div class="section-title">┌─[ DOMAINS.SYS ]───────────────────────────────────────────────┐</div>
-      <div class="section-body">
-        <p class="cat-title">▶ INDUSTRY DOMAINS WORKED IN:</p>
-        <br/>
-        <p>&nbsp;&nbsp;<span class="highlight">◈ CAPITAL MARKET</span></p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;Portfolio &amp; client management systems for financial clients (Mphasis).</p>
-        <br/>
-        <p>&nbsp;&nbsp;<span class="highlight">◈ REAL ESTATE</span></p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;Large-scale ETL data transformation using PySpark &amp; in-house frameworks (Tavant).</p>
-        <br/>
-        <p>&nbsp;&nbsp;<span class="highlight">◈ MORTGAGE</span></p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;Data pipelines and analysis for mortgage domain datasets (Tavant).</p>
-      </div>
-      <div class="section-close">└───────────────────────────────────────────────────────────────┘</div>
-    </div>
+      <!-- PROJECTS -->
+      <div id="projects" class="section">
+        <div class="section-title">┌─[ PROJECTS.DIR ]──────────────────────────────────────────────┐</div>
+        <div class="section-body">
 
-    <!-- EDUCATION -->
-    <div id="education" class="section">
-      <div class="section-title">┌─[ EDUCATION.SYS ]─────────────────────────────────────────────┐</div>
-      <div class="section-body">
-        <p class="job-title">► HINDUSTAN COLLEGE OF SCIENCE AND TECHNOLOGY</p>
-        <p>&nbsp;&nbsp;<span class="highlight">B.Tech — Computer Science &amp; Engineering</span></p>
-        <p>&nbsp;&nbsp;Year of Passing: <span class="highlight">2019</span></p>
-      </div>
-      <div class="section-close">└───────────────────────────────────────────────────────────────┘</div>
-    </div>
+          <div class="project">
+            <p class="proj-title">◈ RAG SEARCH ENGINE <span class="tag">[PYTHON]</span><span class="tag">[RAG]</span><span class="tag">[NLP]</span><span class="tag">[CHROMADB]</span></p>
+            <p>&nbsp;&nbsp;Retrieval-Augmented Generation app for semantic document search using vector embeddings.</p>
+            <p>&nbsp;&nbsp;<a href="https://github.com/tanujsingh123/rag-search" class="dos-link" target="_blank">[VIEW SOURCE]</a>
+               &nbsp;<a href="#" class="dos-link" target="_blank">[RUN DEMO]</a></p>
+          </div>
 
-    <!-- CONTACT -->
-    <div id="contact" class="section">
-      <div class="section-title">┌─[ CONTACT.INI ]───────────────────────────────────────────────┐</div>
-      <div class="section-body">
-        <p><span class="prompt">GITHUB  :</span> <a href="https://github.com/tanujsingh123" class="dos-link" target="_blank">github.com/tanujsingh123</a></p>
-        <p><span class="prompt">LINKEDIN:</span> <a href="https://www.linkedin.com/in/tanuj-singh-432216159/" class="dos-link" target="_blank">linkedin.com/in/tanuj-singh-432216159/</a></p>
-        <p><span class="prompt">EMAIL   :</span> <a href="mailto:tanuj.singh.01234@gmail.com" class="dos-link">tanuj.singh.01234@gmail.com</a></p>
-        <p><span class="prompt">LOCATION:</span> Greater Noida, Uttar Pradesh, IN</p>
-        <br/>
-        <p class="cursor-line"><span class="prompt">C:\&gt;</span> <span class="blink">█</span></p>
+          <div class="divider-thin">&nbsp;&nbsp;···················································</div>
+
+          <div class="project">
+            <p class="proj-title">◈ DIGITAL STENOGRAPHER <span class="tag">[PYTHON]</span><span class="tag">[DESKTOP]</span><span class="tag">[SPEECH]</span></p>
+            <p>&nbsp;&nbsp;Real-time speech-to-text stenography desktop tool for meetings, interviews &amp; note-taking.</p>
+            <p>&nbsp;&nbsp;<a href="https://github.com/tanujsingh123/digital-stenographer" class="dos-link" target="_blank">[VIEW SOURCE]</a>
+               &nbsp;<a href="https://github.com/tanujsingh123/digital-stenographer/releases" class="dos-link" target="_blank">[DOWNLOAD]</a></p>
+          </div>
+
+          <div class="divider-thin">&nbsp;&nbsp;···················································</div>
+
+          <div class="project">
+            <p class="proj-title">◈ EMOTION RECOGNITION SYSTEM <span class="tag">[PYTHON]</span><span class="tag">[ML]</span><span class="tag">[DESKTOP]</span><span class="tag">[CV]</span></p>
+            <p>&nbsp;&nbsp;Desktop application that detects human emotions in real-time using facial expression analysis.</p>
+            <p>&nbsp;&nbsp;<a href="https://github.com/tanujsingh123/emotion-recognition" class="dos-link" target="_blank">[VIEW SOURCE]</a>
+               &nbsp;<a href="https://github.com/tanujsingh123/emotion-recognition/releases" class="dos-link" target="_blank">[DOWNLOAD]</a></p>
+          </div>
+
+          <div class="divider-thin">&nbsp;&nbsp;···················································</div>
+
+          <div class="project">
+            <p class="proj-title">◈ PYGAME ARCADE <span class="tag">[PYTHON]</span><span class="tag">[PYGAME]</span><span class="tag">[GAME]</span></p>
+            <p>&nbsp;&nbsp;A retro 2D arcade game built with Pygame.</p>
+            <p>&nbsp;&nbsp;<a href="https://github.com/tanujsingh123/pygame-arcade" class="dos-link" target="_blank">[VIEW SOURCE]</a>
+               &nbsp;<a href="https://tanujsingh123.itch.io" class="dos-link" target="_blank">[PLAY / DOWNLOAD]</a></p>
+          </div>
+
+        </div>
+        <div class="section-close">└───────────────────────────────────────────────────────────────┘</div>
       </div>
-      <div class="section-close">└───────────────────────────────────────────────────────────────┘</div>
-    </div>
+
+      <!-- EDUCATION -->
+      <div id="education" class="section">
+        <div class="section-title">┌─[ EDUCATION.SYS ]─────────────────────────────────────────────┐</div>
+        <div class="section-body">
+          <p class="job-title">► HINDUSTAN COLLEGE OF SCIENCE AND TECHNOLOGY</p>
+          <p>&nbsp;&nbsp;<span class="highlight">B.Tech — Computer Science &amp; Engineering</span></p>
+          <p>&nbsp;&nbsp;Year of Passing: <span class="highlight">2019</span></p>
+        </div>
+        <div class="section-close">└───────────────────────────────────────────────────────────────┘</div>
+      </div>
+
+      <!-- CONTACT -->
+      <div id="contact" class="section">
+        <div class="section-title">┌─[ CONTACT.INI ]───────────────────────────────────────────────┐</div>
+        <div class="section-body">
+          <p><span class="prompt">GITHUB  :</span> <a href="https://github.com/tanujsingh123" class="dos-link" target="_blank">github.com/tanujsingh123</a></p>
+          <p><span class="prompt">LINKEDIN:</span> <a href="https://linkedin.com/in/YOUR_PROFILE" class="dos-link" target="_blank">linkedin.com/in/YOUR_PROFILE</a></p>
+          <p><span class="prompt">EMAIL   :</span> <a href="mailto:your@email.com" class="dos-link">your@email.com</a></p>
+          <p><span class="prompt">LOCATION:</span> Greater Noida, Uttar Pradesh, IN</p>
+          <br/>
+          <p class="cursor-line"><span class="prompt">C:\&gt;</span> <span class="blink">█</span></p>
+        </div>
+        <div class="section-close">└───────────────────────────────────────────────────────────────┘</div>
+      </div>
+
+    </div><!-- end content-scroll -->
 
     <!-- Footer -->
     <div class="dos-footer">
-      <span>▓▒░ PRESS [F1-F6] TO NAVIGATE | © 2026 TANUJ SINGH — TECHNICAL LEAD ░▒▓</span>
+      <span>▓▒░ [F1] ABOUT &nbsp;[F2] SKILLS &nbsp;[F3] EXPERIENCE &nbsp;[F4] PROJECTS &nbsp;[F5] EDUCATION &nbsp;[F6] CONTACT &nbsp;|&nbsp; © 2026 TANUJ SINGH ░▒▓</span>
     </div>
 
-  </div>
+  </div><!-- end dos-container -->
 
   <script src="script.js"></script>
 </body>
