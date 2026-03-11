@@ -1,28 +1,18 @@
-/* ============================
-   DOS / ARCADE RETRO STYLE CSS
-   16-bit Palette + CRT Effects
-   ============================ */
-
 :root {
-  --green:    #00ff41;
-  --amber:    #ffb000;
-  --cyan:     #00e5ff;
-  --magenta:  #ff00ff;
+  --green:      #00ff41;
+  --amber:      #ffb000;
+  --cyan:       #00e5ff;
+  --magenta:    #ff00ff;
   --dark-green: #003b00;
-  --bg:       #0a0a0a;
-  --panel:    #0d1a0d;
-  --border:   #00aa2a;
-  --dim:      #007a1a;
-  --font:     'Share Tech Mono', 'Courier New', monospace;
+  --bg:         #0a0a0a;
+  --panel:      #0d1a0d;
+  --border:     #00aa2a;
+  --dim:        #007a1a;
+  --font:       'Share Tech Mono', 'Courier New', monospace;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* Lock page — no outer scroll */
 html, body {
   height: 100%;
   width: 100%;
@@ -36,50 +26,45 @@ html, body {
   justify-content: center;
 }
 
-/* === CRT Scanlines === */
+/* === CRT Effects === */
 .scanlines {
   pointer-events: none;
-  position: fixed;
-  top: 0; left: 0;
+  position: fixed; top: 0; left: 0;
   width: 100%; height: 100%;
   z-index: 9999;
   background: repeating-linear-gradient(
     to bottom,
-    transparent 0px,
-    transparent 2px,
-    rgba(0, 0, 0, 0.15) 2px,
-    rgba(0, 0, 0, 0.15) 4px
+    transparent 0px, transparent 2px,
+    rgba(0,0,0,0.12) 2px, rgba(0,0,0,0.12) 4px
   );
 }
 
 .crt-overlay {
   pointer-events: none;
-  position: fixed;
-  top: 0; left: 0;
+  position: fixed; top: 0; left: 0;
   width: 100%; height: 100%;
   z-index: 9998;
   background: radial-gradient(ellipse at center,
-    transparent 60%,
-    rgba(0, 0, 0, 0.65) 100%
+    transparent 55%, rgba(0,0,0,0.7) 100%
   );
 }
 
-/* === Fixed Console Window === */
+/* === Console Window === */
 .dos-container {
   position: relative;
   z-index: 1;
   width: 92vw;
-  max-width: 920px;
+  max-width: 960px;
   height: 88vh;
   display: flex;
   flex-direction: column;
   border: 2px solid var(--border);
   background: var(--panel);
   box-shadow:
-    0 0 12px var(--green),
-    0 0 40px rgba(0, 255, 65, 0.18),
-    inset 0 0 60px rgba(0, 0, 0, 0.5);
-  padding: 16px 20px 0 20px;
+    0 0 14px var(--green),
+    0 0 50px rgba(0,255,65,0.15),
+    inset 0 0 60px rgba(0,0,0,0.5);
+  padding: 14px 18px 0 18px;
 }
 
 /* === Title Bar === */
@@ -94,23 +79,23 @@ html, body {
   font-weight: bold;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
-/* === ASCII Header === */
+/* === Name + ASCII Header === */
 .ascii-header {
   flex-shrink: 0;
   text-align: center;
-  padding: 4px 0 8px;
+  padding: 2px 0 6px;
 }
 
 .name-title {
-  font-size: 24px;
-  letter-spacing: 5px;
+  font-size: 22px;
+  letter-spacing: 6px;
   text-transform: uppercase;
   color: var(--green);
-  text-shadow: 0 0 12px var(--green), 0 0 30px rgba(0,255,65,0.4);
-  margin-bottom: 6px;
+  text-shadow: 0 0 14px var(--green), 0 0 40px rgba(0,255,65,0.35);
+  margin-bottom: 4px;
   font-weight: normal;
 }
 
@@ -119,13 +104,13 @@ html, body {
   font-size: 10px;
   line-height: 1.3;
   text-shadow: 0 0 8px var(--cyan);
-  overflow-x: auto;
+  overflow: hidden;
 }
 
 .tagline {
   color: var(--amber);
   letter-spacing: 2px;
-  margin-top: 6px;
+  margin-top: 4px;
   text-shadow: 0 0 6px var(--amber);
   font-size: 12px;
 }
@@ -137,14 +122,10 @@ html, body {
   flex-wrap: wrap;
   gap: 5px;
   align-items: center;
-  margin: 10px 0 8px;
+  margin: 8px 0 6px;
 }
 
-.nav-label {
-  color: var(--dim);
-  margin-right: 4px;
-  font-size: 12px;
-}
+.nav-label { color: var(--dim); margin-right: 4px; font-size: 12px; }
 
 .dos-btn {
   background: transparent;
@@ -156,83 +137,77 @@ html, body {
   cursor: pointer;
   letter-spacing: 1px;
   transition: all 0.15s;
-  text-shadow: 0 0 5px var(--green);
+  text-shadow: 0 0 4px var(--green);
 }
 
-.dos-btn:hover,
-.dos-btn.active {
+.dos-btn:hover, .dos-btn.active {
   background: var(--green);
   color: #000;
   box-shadow: 0 0 10px var(--green);
   text-shadow: none;
 }
 
-/* === Divider (static, below nav) === */
-.divider {
+/* === Full-width Dividers (filled by JS) === */
+.main-divider {
   flex-shrink: 0;
   color: var(--border);
-  font-size: 12px;
+  font-size: 14px;
   margin: 4px 0;
+  white-space: pre;
   overflow: hidden;
-  white-space: nowrap;
+  line-height: 1;
 }
 
-.divider-thin {
+.thin-divider {
   color: var(--dim);
   margin: 10px 0;
+  white-space: pre;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1;
 }
 
-/* === Scrollable Content Area === */
+/* === Scrollable Content === */
 .content-scroll {
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 6px 4px 10px 4px;
-  /* Custom scrollbar */
+  padding: 4px 2px 10px 2px;
   scrollbar-width: thin;
   scrollbar-color: var(--border) var(--panel);
 }
 
-.content-scroll::-webkit-scrollbar {
-  width: 6px;
-}
-.content-scroll::-webkit-scrollbar-track {
-  background: var(--panel);
-}
-.content-scroll::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 0;
-}
-.content-scroll::-webkit-scrollbar-thumb:hover {
-  background: var(--green);
-}
+.content-scroll::-webkit-scrollbar { width: 5px; }
+.content-scroll::-webkit-scrollbar-track { background: var(--panel); }
+.content-scroll::-webkit-scrollbar-thumb { background: var(--border); }
+.content-scroll::-webkit-scrollbar-thumb:hover { background: var(--green); }
 
-/* === Sections === */
-.section {
-  display: none;
-  animation: fadeIn 0.3s ease;
-}
-
-.section.active {
-  display: block;
-}
+/* === Section Borders (filled by JS) === */
+.section { display: none; animation: fadeIn 0.25s ease; }
+.section.active { display: block; }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(6px); }
+  from { opacity: 0; transform: translateY(5px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
 .section-title {
   color: var(--cyan);
   text-shadow: 0 0 6px var(--cyan);
-  margin: 10px 0 4px;
-  font-size: 13px;
+  margin: 10px 0 0;
+  font-size: 14px;
+  white-space: pre;
+  overflow: hidden;
+  line-height: 1.4;
 }
 
 .section-close {
   color: var(--cyan);
-  font-size: 13px;
+  font-size: 14px;
   margin-bottom: 10px;
+  white-space: pre;
+  overflow: hidden;
+  line-height: 1.4;
 }
 
 .section-body {
@@ -240,16 +215,11 @@ html, body {
   line-height: 2;
 }
 
-/* === Prompts & Highlights === */
-.prompt {
-  color: var(--amber);
-  text-shadow: 0 0 5px var(--amber);
-}
-
-.highlight {
-  color: var(--magenta);
-  text-shadow: 0 0 5px var(--magenta);
-}
+/* === Text Styles === */
+.prompt   { color: var(--amber); text-shadow: 0 0 5px var(--amber); }
+.highlight { color: var(--magenta); text-shadow: 0 0 5px var(--magenta); }
+.cat-title { color: var(--amber); margin-bottom: 8px; text-shadow: 0 0 5px var(--amber); }
+.tech-list { color: var(--dim); font-size: 12px; line-height: 1.9; }
 
 /* === Skill Bars === */
 .skill-grid {
@@ -258,59 +228,44 @@ html, body {
   gap: 18px;
 }
 
-.cat-title {
-  color: var(--amber);
-  margin-bottom: 8px;
-  text-shadow: 0 0 5px var(--amber);
-}
-
 .skill-bar-row {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 5px;
+  gap: 8px;
+  margin-bottom: 6px;
   font-size: 12px;
 }
 
-.skill-bar-row > span {
-  min-width: 110px;
-}
+.skill-bar-row > span:first-child { min-width: 108px; }
 
 .skill-bar {
   flex: 1;
-  height: 9px;
+  height: 10px;
   background: #001800;
   border: 1px solid var(--border);
+  overflow: hidden;
 }
 
+/* Smooth fill — driven by JS setting width via transition */
 .fill {
   height: 100%;
+  width: 0%;
   background: var(--green);
-  box-shadow: 0 0 5px var(--green);
-  transition: width 1s ease;
-  width: 0;
+  box-shadow: 0 0 6px var(--green);
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.tech-list {
+.pct {
   color: var(--dim);
-  font-size: 12px;
-  line-height: 1.8;
+  font-size: 11px;
+  min-width: 28px;
+  text-align: right;
 }
 
 /* === Job / Project entries === */
-.job, .project {
-  margin-bottom: 10px;
-}
-
-.job-title, .proj-title {
-  color: var(--cyan);
-  text-shadow: 0 0 5px var(--cyan);
-}
-
-.job-date {
-  color: var(--dim);
-  font-size: 12px;
-}
+.job, .project { margin-bottom: 10px; }
+.job-title, .proj-title { color: var(--cyan); text-shadow: 0 0 5px var(--cyan); }
+.job-date { color: var(--dim); font-size: 12px; }
 
 .tag {
   display: inline-block;
@@ -323,26 +278,12 @@ html, body {
 }
 
 /* === Links === */
-.dos-link {
-  color: var(--amber);
-  text-decoration: none;
-  text-shadow: 0 0 4px var(--amber);
-}
-
-.dos-link:hover {
-  color: var(--green);
-  text-shadow: 0 0 8px var(--green);
-  text-decoration: underline;
-}
+.dos-link { color: var(--amber); text-decoration: none; text-shadow: 0 0 4px var(--amber); }
+.dos-link:hover { color: var(--green); text-shadow: 0 0 8px var(--green); text-decoration: underline; }
 
 /* === Blink === */
-.blink {
-  animation: blink 1s step-start infinite;
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
-}
+.blink { animation: blink 1s step-start infinite; }
+@keyframes blink { 50% { opacity: 0; } }
 
 /* === Footer === */
 .dos-footer {
@@ -360,10 +301,9 @@ html, body {
 
 /* === Responsive === */
 @media (max-width: 600px) {
-  .skill-grid        { grid-template-columns: 1fr; }
-  .ascii-header pre  { font-size: 6px; }
-  .name-title        { font-size: 16px; letter-spacing: 3px; }
-  .dos-container     { width: 98vw; height: 96vh; padding: 10px 10px 0; }
-  .dos-btn           { font-size: 10px; padding: 2px 5px; }
-  .dos-footer        { font-size: 9px; }
+  .skill-grid       { grid-template-columns: 1fr; }
+  .ascii-header pre { font-size: 6px; }
+  .name-title       { font-size: 15px; letter-spacing: 3px; }
+  .dos-container    { width: 99vw; height: 97vh; padding: 8px 8px 0; }
+  .dos-btn          { font-size: 10px; padding: 2px 5px; }
 }
