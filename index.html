@@ -26,8 +26,7 @@
      ██║   ███████║██╔██╗ ██║██║   ██║     ██║    ███████╗██║██╔██╗ ██║██║  ███╗███████║
      ██║   ██╔══██║██║╚██╗██║██║   ██║██   ██║    ╚════██║██║██║╚██╗██║██║   ██║██╔══██║
      ██║   ██║  ██║██║ ╚████║╚██████╔╝╚█████╔╝    ███████║██║██║ ╚████║╚██████╔╝██║  ██║
-     ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝  ╚════╝     ╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝
-                                                                                      
+     ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝  ╚════╝    ╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝
       </pre>
       <p class="tagline">>> TECHNICAL LEAD | DATA &amp; AI ENGINEER | GREATER NOIDA, IN <<</p>
     </div>
@@ -37,7 +36,7 @@
       <button class="dos-btn active" onclick="showSection('about')">[F1] ABOUT</button>
       <button class="dos-btn" onclick="showSection('skills')">[F2] SKILLS</button>
       <button class="dos-btn" onclick="showSection('experience')">[F3] EXPERIENCE</button>
-      <button class="dos-btn" onclick="showSection('projects')">[F4] PROJECTS</button>
+      <button class="dos-btn" onclick="showSection('myapps')">[F4] MY APPS</button>
       <button class="dos-btn" onclick="showSection('education')">[F5] EDUCATION</button>
       <button class="dos-btn" onclick="showSection('contact')">[F6] CONTACT</button>
     </div>
@@ -51,30 +50,39 @@
         <div class="section-title" data-title="ABOUT ME"></div>
         <div class="section-body">
 
-          <!-- Typewriter lines injected here by JS -->
           <div id="about-typewriter"></div>
 
-          <!-- Animated stat counters -->
+          <!-- FIX #1: 6.5 → 6 (parseInt-safe), FIX #4: removed empty stat-plus span -->
           <div class="about-stats">
             <div class="stat-box">
-              <div class="stat-top"><span class="stat-num" data-target="6">0</span><span class="stat-plus">+</span></div>
+              <div class="stat-top">
+                <span class="stat-num" data-target="6">0</span>
+                <span class="stat-plus">+</span>
+              </div>
               <div class="stat-label">YRS EXP</div>
             </div>
             <div class="stat-box">
-              <div class="stat-top"><span class="stat-num" data-target="2">0</span></div>
+              <div class="stat-top">
+                <span class="stat-num" data-target="2">0</span>
+              </div>
               <div class="stat-label">COMPANIES</div>
             </div>
             <div class="stat-box">
-              <div class="stat-top"><span class="stat-num" data-target="4">0</span><span class="stat-plus">+</span></div>
+              <div class="stat-top">
+                <span class="stat-num" data-target="4">0</span>
+                <span class="stat-plus">+</span>
+              </div>
               <div class="stat-label">PROJECTS</div>
             </div>
             <div class="stat-box">
-              <div class="stat-top"><span class="stat-num" data-target="15">0</span><span class="stat-plus">+</span></div>
+              <div class="stat-top">
+                <span class="stat-num" data-target="15">0</span>
+                <span class="stat-plus">+</span>
+              </div>
               <div class="stat-label">TECH STACK</div>
             </div>
           </div>
 
-          <!-- Hoverable tech badges -->
           <div class="about-badge-label">▶ KNOWN TECH:</div>
           <div class="tech-badges" id="about-badges"></div>
 
@@ -90,34 +98,88 @@
         <div class="section-title" data-title="SKILLS.DAT"></div>
         <div class="section-body">
           <div class="skill-grid">
+
             <div class="skill-category">
               <p class="cat-title">▶ LANGUAGES</p>
-              <div class="skill-bar-row"><span>Python 3.x</span><div class="skill-bar"><div class="fill" data-width="95"></div></div><span class="pct">95%</span></div>
-              <div class="skill-bar-row"><span>Core Java</span><div class="skill-bar"><div class="fill" data-width="80"></div></div><span class="pct">80%</span></div>
-              <div class="skill-bar-row"><span>SQL</span><div class="skill-bar"><div class="fill" data-width="90"></div></div><span class="pct">90%</span></div>
-              <div class="skill-bar-row"><span>NoSQL/MongoDB</span><div class="skill-bar"><div class="fill" data-width="75"></div></div><span class="pct">75%</span></div>
+              <!-- FIX #2: all .pct spans removed across all 16 rows -->
+              <div class="skill-bar-row">
+                <span>Python 3.x</span>
+                <div class="skill-bar"><div class="fill" data-width="95"></div></div>
+              </div>
+              <div class="skill-bar-row">
+                <span>Core Java</span>
+                <div class="skill-bar"><div class="fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-bar-row">
+                <span>SQL</span>
+                <div class="skill-bar"><div class="fill" data-width="90"></div></div>
+              </div>
+              <div class="skill-bar-row">
+                <span>NoSQL/MongoDB</span>
+                <div class="skill-bar"><div class="fill" data-width="75"></div></div>
+              </div>
             </div>
+
             <div class="skill-category">
               <p class="cat-title">▶ BIG DATA &amp; CLOUD</p>
-              <div class="skill-bar-row"><span>PySpark</span><div class="skill-bar"><div class="fill" data-width="90"></div></div><span class="pct">90%</span></div>
-              <div class="skill-bar-row"><span>Databricks</span><div class="skill-bar"><div class="fill" data-width="85"></div></div><span class="pct">85%</span></div>
-              <div class="skill-bar-row"><span>Apache Hadoop</span><div class="skill-bar"><div class="fill" data-width="80"></div></div><span class="pct">80%</span></div>
-              <div class="skill-bar-row"><span>AWS S3/Lambda</span><div class="skill-bar"><div class="fill" data-width="78"></div></div><span class="pct">78%</span></div>
+              <div class="skill-bar-row">
+                <span>PySpark</span>
+                <div class="skill-bar"><div class="fill" data-width="90"></div></div>
+              </div>
+              <div class="skill-bar-row">
+                <span>Databricks</span>
+                <div class="skill-bar"><div class="fill" data-width="85"></div></div>
+              </div>
+              <div class="skill-bar-row">
+                <span>Apache Hadoop</span>
+                <div class="skill-bar"><div class="fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-bar-row">
+                <span>AWS S3/Lambda</span>
+                <div class="skill-bar"><div class="fill" data-width="78"></div></div>
+              </div>
             </div>
+
             <div class="skill-category">
               <p class="cat-title">▶ AI / ML</p>
-              <div class="skill-bar-row"><span>SentenceTransf.</span><div class="skill-bar"><div class="fill" data-width="85"></div></div><span class="pct">85%</span></div>
-              <div class="skill-bar-row"><span>ChromaDB</span><div class="skill-bar"><div class="fill" data-width="82"></div></div><span class="pct">82%</span></div>
-              <div class="skill-bar-row"><span>PyTorch</span><div class="skill-bar"><div class="fill" data-width="75"></div></div><span class="pct">75%</span></div>
-              <div class="skill-bar-row"><span>Streamlit</span><div class="skill-bar"><div class="fill" data-width="88"></div></div><span class="pct">88%</span></div>
+              <div class="skill-bar-row">
+                <span>SentenceTransf.</span>
+                <div class="skill-bar"><div class="fill" data-width="85"></div></div>
+              </div>
+              <div class="skill-bar-row">
+                <span>ChromaDB</span>
+                <div class="skill-bar"><div class="fill" data-width="82"></div></div>
+              </div>
+              <div class="skill-bar-row">
+                <span>PyTorch</span>
+                <div class="skill-bar"><div class="fill" data-width="75"></div></div>
+              </div>
+              <div class="skill-bar-row">
+                <span>Streamlit</span>
+                <div class="skill-bar"><div class="fill" data-width="88"></div></div>
+              </div>
             </div>
+
             <div class="skill-category">
               <p class="cat-title">▶ DEVOPS &amp; TOOLS</p>
-              <div class="skill-bar-row"><span>Docker</span><div class="skill-bar"><div class="fill" data-width="80"></div></div><span class="pct">80%</span></div>
-              <div class="skill-bar-row"><span>Kubernetes</span><div class="skill-bar"><div class="fill" data-width="72"></div></div><span class="pct">72%</span></div>
-              <div class="skill-bar-row"><span>Jenkins / CI-CD</span><div class="skill-bar"><div class="fill" data-width="80"></div></div><span class="pct">80%</span></div>
-              <div class="skill-bar-row"><span>Git / GitLab</span><div class="skill-bar"><div class="fill" data-width="90"></div></div><span class="pct">90%</span></div>
+              <div class="skill-bar-row">
+                <span>Docker</span>
+                <div class="skill-bar"><div class="fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-bar-row">
+                <span>Kubernetes</span>
+                <div class="skill-bar"><div class="fill" data-width="72"></div></div>
+              </div>
+              <div class="skill-bar-row">
+                <span>Jenkins / CI-CD</span>
+                <div class="skill-bar"><div class="fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-bar-row">
+                <span>Git / GitLab</span>
+                <div class="skill-bar"><div class="fill" data-width="90"></div></div>
+              </div>
             </div>
+
           </div>
           <br/>
           <p class="cat-title">▶ FULL STACK:</p>
@@ -170,43 +232,99 @@
         <div class="section-close"></div>
       </div>
 
-      <!-- ═══════════ PROJECTS ═══════════ -->
-      <div id="projects" class="section">
-        <div class="section-title" data-title="PROJECTS.DIR"></div>
+      <!-- ═══════════ MY APPS ═══════════ -->
+      <div id="myapps" class="section">
+        <div class="section-title" data-title="MY_APPS.DIR"></div>
         <div class="section-body">
+          <p class="sys-line">&nbsp;&nbsp;[SYS] Personal projects built outside of work. Source on GitHub.</p>
+          <br/>
 
-          <div class="project">
-            <p class="proj-title">◈ RAG SEARCH ENGINE <span class="tag">[PYTHON]</span><span class="tag">[RAG]</span><span class="tag">[CHROMADB]</span><span class="tag">[NLP]</span></p>
-            <p>&nbsp;&nbsp;Retrieval-Augmented Generation app for semantic document search using vector embeddings.</p>
-            <p>&nbsp;&nbsp;<a href="https://github.com/tanujsingh123/rag-search" class="dos-link" target="_blank">[VIEW SOURCE]</a>
-               &nbsp;<a href="#" class="dos-link">[RUN DEMO]</a></p>
+          <!-- FIX #3: rel="noopener noreferrer" added to ALL external links below -->
+
+          <div class="app-card">
+            <div class="app-card-header">
+              <span class="app-icon">◈</span>
+              <span class="app-name">RAG SEARCH ENGINE</span>
+              <span class="app-status status-live">[LIVE DEMO]</span>
+            </div>
+            <div class="app-card-body">
+              <p class="app-desc">Retrieval-Augmented Generation system for semantic document search. Embeds documents into a ChromaDB vector store and retrieves answers using natural language queries powered by SentenceTransformers.</p>
+              <div class="app-meta">
+                <span class="tag">[PYTHON]</span>
+                <span class="tag">[RAG]</span>
+                <span class="tag">[CHROMADB]</span>
+                <span class="tag">[SENTENCETRANSFORMERS]</span>
+                <span class="tag">[NLP]</span>
+              </div>
+              <div class="app-links">
+                <a href="https://github.com/tanujsingh123/rag-search" class="dos-link" target="_blank" rel="noopener noreferrer">[⌥ VIEW SOURCE]</a>
+                <!-- Update href below when Streamlit demo is live -->
+                <a href="#" class="dos-link">[▶ RUN DEMO — COMING SOON]</a>
+              </div>
+            </div>
           </div>
 
-          <div class="thin-divider"></div>
-
-          <div class="project">
-            <p class="proj-title">◈ DIGITAL STENOGRAPHER <span class="tag">[PYTHON]</span><span class="tag">[DESKTOP]</span><span class="tag">[SPEECH-TO-TEXT]</span></p>
-            <p>&nbsp;&nbsp;Real-time speech-to-text stenography desktop tool for meetings, interviews &amp; note-taking.</p>
-            <p>&nbsp;&nbsp;<a href="https://github.com/tanujsingh123/digital-stenographer" class="dos-link" target="_blank">[VIEW SOURCE]</a>
-               &nbsp;<a href="https://github.com/tanujsingh123/digital-stenographer/releases" class="dos-link" target="_blank">[DOWNLOAD .EXE]</a></p>
+          <div class="app-card">
+            <div class="app-card-header">
+              <span class="app-icon">◈</span>
+              <span class="app-name">DIGITAL STENOGRAPHER</span>
+              <span class="app-status status-download">[DOWNLOAD]</span>
+            </div>
+            <div class="app-card-body">
+              <p class="app-desc">Real-time speech-to-text desktop tool built for capturing meetings, interviews and voice notes. Runs as a lightweight native app — no browser required.</p>
+              <div class="app-meta">
+                <span class="tag">[PYTHON]</span>
+                <span class="tag">[SPEECH-TO-TEXT]</span>
+                <span class="tag">[DESKTOP]</span>
+                <span class="tag">[PYINSTALLER]</span>
+              </div>
+              <div class="app-links">
+                <a href="https://github.com/tanujsingh123/digital-stenographer" class="dos-link" target="_blank" rel="noopener noreferrer">[⌥ VIEW SOURCE]</a>
+                <a href="#" class="dos-link">[▶ Download — COMING SOON]</a>
+              </div>
+            </div>
           </div>
 
-          <div class="thin-divider"></div>
-
-          <div class="project">
-            <p class="proj-title">◈ EMOTION RECOGNITION SYSTEM <span class="tag">[PYTHON]</span><span class="tag">[ML]</span><span class="tag">[OPENCV]</span><span class="tag">[DESKTOP]</span></p>
-            <p>&nbsp;&nbsp;Desktop application detecting human emotions in real-time via facial expression analysis.</p>
-            <p>&nbsp;&nbsp;<a href="https://github.com/tanujsingh123/emotion-recognition" class="dos-link" target="_blank">[VIEW SOURCE]</a>
-               &nbsp;<a href="https://github.com/tanujsingh123/emotion-recognition/releases" class="dos-link" target="_blank">[DOWNLOAD .EXE]</a></p>
+          <div class="app-card">
+            <div class="app-card-header">
+              <span class="app-icon">◈</span>
+              <span class="app-name">EMOTION RECOGNITION SYSTEM</span>
+              <span class="app-status status-download">[DOWNLOAD]</span>
+            </div>
+            <div class="app-card-body">
+              <p class="app-desc">Desktop application that analyses facial expressions in real-time using a computer vision pipeline to detect and classify human emotions via webcam feed.</p>
+              <div class="app-meta">
+                <span class="tag">[PYTHON]</span>
+                <span class="tag">[OPENCV]</span>
+                <span class="tag">[DEEP LEARNING]</span>
+                <span class="tag">[DESKTOP]</span>
+              </div>
+              <div class="app-links">
+                <a href="https://github.com/tanujsingh123/emotion-recognition" class="dos-link" target="_blank" rel="noopener noreferrer">[⌥ VIEW SOURCE]</a>
+                <a href="#" class="dos-link">[▶ Download — COMING SOON]</a>
+              </div>
+            </div>
           </div>
 
-          <div class="thin-divider"></div>
-
-          <div class="project">
-            <p class="proj-title">◈ RETRO PYGAME ARCADE <span class="tag">[PYTHON]</span><span class="tag">[PYGAME]</span><span class="tag">[GAME]</span></p>
-            <p>&nbsp;&nbsp;A retro 2D arcade game built with Pygame.</p>
-            <p>&nbsp;&nbsp;<a href="https://github.com/tanujsingh123/pygame-arcade" class="dos-link" target="_blank">[VIEW SOURCE]</a>
-               &nbsp;<a href="https://tanujsingh123.itch.io" class="dos-link" target="_blank">[PLAY / DOWNLOAD]</a></p>
+          <div class="app-card">
+            <div class="app-card-header">
+              <span class="app-icon">◈</span>
+              <span class="app-name">RETRO PYGAME ARCADE</span>
+              <span class="app-status status-play">[PLAY NOW]</span>
+            </div>
+            <div class="app-card-body">
+              <p class="app-desc">A retro-style 2D arcade game crafted with Pygame. Old-school mechanics, pixel art style and classic game loop logic — all in pure Python.</p>
+              <div class="app-meta">
+                <span class="tag">[PYTHON]</span>
+                <span class="tag">[PYGAME]</span>
+                <span class="tag">[GAME DEV]</span>
+                <span class="tag">[2D]</span>
+              </div>
+              <div class="app-links">
+                <a href="https://github.com/tanujsingh123/pygame-arcade" class="dos-link" target="_blank" rel="noopener noreferrer">[⌥ VIEW SOURCE]</a>
+                <a href="#" class="dos-link" target="_blank" rel="noopener noreferrer">[▶ Game Coming Soon]</a>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -228,12 +346,22 @@
       <div id="contact" class="section">
         <div class="section-title" data-title="CONTACT.INI"></div>
         <div class="section-body">
-          <p><span class="prompt">GITHUB  :</span> <a href="https://github.com/tanujsingh123" class="dos-link" target="_blank">github.com/tanujsingh123</a></p>
-          <p><span class="prompt">LINKEDIN:</span> <a href="https://linkedin.com/in/YOUR_PROFILE" class="dos-link" target="_blank">linkedin.com/in/YOUR_PROFILE</a></p>
-          <p><span class="prompt">EMAIL   :</span> <a href="mailto:your@email.com" class="dos-link">your@email.com</a></p>
-          <p><span class="prompt">LOCATION:</span> Greater Noida, Uttar Pradesh, IN</p>
+          <p><span class="prompt">GITHUB  :</span>
+            <a href="https://github.com/tanujsingh123" class="dos-link" target="_blank" rel="noopener noreferrer">github.com/tanujsingh123</a>
+          </p>
+          <p><span class="prompt">LINKEDIN:</span>
+            <!-- TODO: replace YOUR_PROFILE with your real LinkedIn handle -->
+            <a href="https://linkedin.com/in/tanuj-singh-432216159/" class="dos-link" target="_blank" rel="noopener noreferrer">linkedin.com/in/tanuj-singh-432216159</a>
+          </p>
+          <p><span class="prompt">EMAIL   :</span>
+            <!-- TODO: replace with your real email -->
+            <a href="mailto:tanuj.singh.01234@gmail.com" class="dos-link">tanuj.singh.01234@gmail.com</a>
+          </p>
+          <p><span class="prompt">LOCATION:</span> Noida, Uttar Pradesh, IN</p>
           <br/>
-          <p class="cursor-line"><span class="prompt">C:\&gt;</span> <span class="blink">█</span></p>
+          <p class="cursor-line">
+            <span class="prompt">C:\&gt;</span> <span class="blink">█</span>
+          </p>
         </div>
         <div class="section-close"></div>
       </div>
@@ -241,7 +369,7 @@
     </div><!-- end content-scroll -->
 
     <div class="dos-footer">
-      <span>▓▒░ [F1] ABOUT &nbsp;[F2] SKILLS &nbsp;[F3] EXPERIENCE &nbsp;[F4] PROJECTS &nbsp;[F5] EDUCATION &nbsp;[F6] CONTACT &nbsp;|&nbsp; © 2026 TANUJ SINGH ░▒▓</span>
+      <span>▓▒░ [F1] ABOUT &nbsp;[F2] SKILLS &nbsp;[F3] EXPERIENCE &nbsp;[F4] MY APPS &nbsp;[F5] EDUCATION &nbsp;[F6] CONTACT &nbsp;|&nbsp; © 2026 TANUJ SINGH ░▒▓</span>
     </div>
 
   </div>
